@@ -5,6 +5,7 @@ import time
 import json
 import serial
 import pytesseract
+import serial.tools.list_ports
 
 # non_max_suppression taken from https://github.com/PyImageSearch/imutils/blob/master/imutils/object_detection.py#L4
 def non_max_suppression(boxes, probs=None, overlapThresh=0.3):
