@@ -70,7 +70,14 @@ def non_max_suppression(boxes, probs=None, overlapThresh=0.3):
 	# return only the bounding boxes that were picked
 	return boxes[pick].astype("int")
 
+
 print("serial", serial.__version__)
+
+ports = serial.tools.list_ports.comports()
+for p in ports:
+    print(p.device)
+print(len(ports), 'ports found')
+
 ser = serial.Serial('COM5', 9800, timeout=1)
 
 # Lets wait a little for the Arduino to setup
